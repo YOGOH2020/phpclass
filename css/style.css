@@ -1,0 +1,20 @@
+form{
+    background: darkblue;
+    border-radius: 15px;
+    padding: 20px;
+}
+input,select{
+    margin: 12px 0;
+}
+label{
+    color: white;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
