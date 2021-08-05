@@ -18,25 +18,27 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <?php
-            $conn=mysqli_connect("localhost","root","","collinsclass");
+            $conn= mysqli_connect("localhost", "root", "", "collinsclass");
             if (!$conn){
                 die("Database Connection Error:" .mysqli_connect_error());
             }
             //Removing Sql Injections
+            $surname=mysqli_real_escape_string($conn,$_POST['sName']);
+            $firstName=mysqli_real_escape_string($conn,$_POST['fName']);
+            $lastName=mysqli_real_escape_string($conn,$_POST['lName']);
             $courseCode=mysqli_real_escape_string($conn,$_POST['cCode']);
-            $courseTitle=mysqli_real_escape_string($conn,$_POST['cTitle']);
-            $courseDuration=mysqli_real_escape_string($conn,$_POST['duration']);
-            $courseLecturer=mysqli_real_escape_string($conn,$_POST['lecturer']);
-            //using mysql insert to post data to the database table coursesj
-            $sql="Insert into courses(course_code,course_title,duration,lecturer) 
-values ('$courseCode','$courseTitle','$courseDuration','$courseLecturer')";
+            $feesPayable=mysqli_real_escape_string($conn,$_POST['fees_payable']);
+            $feesPaid=mysqli_real_escape_string($conn,$_POST['fees_paid']);
+            //using mysql insert to post data to the database table courses
+            $sql= "insert into students (surname, first_name, last_name, course_code, fees_payable, fees_paid) 
+values ('$surname','$firstName','$lastName','$courseCode','$feesPayable','$feesPaid')";
             if ($conn->query($sql)==true){
-                print "<p>New Course Added Successfully</p>";
-                print "<a href='courses.php' class='btn btn-outline-success'>Add New Course</a>";
+                print "<p>Student Added Successfully</p>";
+                print "<a href='students.php' class='btn btn-outline-success'>Add  New Student</a>";
             }
             else{
-                print "<p>Course not added</p>";
-                print "<a href='courses.php' class='btn btn-outline-danger'>Try Again</a>";
+                print "<p>Student not added</p>";
+                print "<a href='students.php' class='btn btn-outline-danger'>Try Again</a>";
             }
             mysqli_close($conn);
             ?>

@@ -1,7 +1,10 @@
 form{
-    background: darkblue;
+    background: #7d0a48;
     border-radius: 15px;
     padding: 20px;
+    border: 2px blue;
+
+
 }
 input,select{
     margin: 12px 0;
@@ -15,6 +18,14 @@ label{
     align-items: center;
     justify-content: center;
 }
+#update{
+    background: blue;
+    border: solid 2px;
+    border-radius: 15px 0 15px 0;
+    padding: 40px;
+    margin-top: 10px;
+}
+
 
 
 

@@ -14,37 +14,46 @@
 <body>
 <div class="container">
     <h2 class="text-center">Courses</h2>
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-        <form action="newCourse.php" method="post">
-            <input type="text" name="cCode" class="form-control" placeholder="*Course Code" required>
-            <br>
-            <input type="text" name="cTitle" class="form-control" placeholder="*Course Title" required>
-            <label for=""><b>Duration</b></label>
-            <select name="duration" id="" class="form-control" required>
-            <option value="1 month">1 Month</option>
-            <option value="2 months">2 months</option>
-            <option value="3 months">3 months</option>
-            <option value="4 months">4 months</option>
-            <option value="5 months">5 months</option>
-            <option value="6 months">6 months</option>
-            </select>
-            <label for=""><b>Lecturer</b></label>
-            <select name="lecturer" id="" class="form-control" required>
-                <option value="Jack">Jack</option>
-                <option value="Ben">Ben</option>
-                <option value="Dorothy">Dorothy</option>
-                <option value="Steve">Steve</option>
-                <option value="Collins">Collins</option>
-                <option value="Bosire">Bosire</option>
-            </select>
-            <hr>
-            <div class="buttons">
-                <button type="submit" class="btn btn-primary">Add New</button>
-            </div>
-        </form>
+
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form action="newCourse.php" method="post">
+                <input type="text" name="cCode" class="form-control" placeholder="*Course Code" required>
+                <br>
+                <input type="text" name="cTitle" class="form-control" placeholder="*Course Title" required>
+                <label for=""><b>Duration</b></label>
+                <select name="duration" id="" class="form-control" required>
+                    <option value="1 month">1 Month</option>
+                    <option value="2 months">2 months</option>
+                    <option value="3 months">3 months</option>
+                    <option value="4 months">4 months</option>
+                    <option value="5 months">5 months</option>
+                    <option value="6 months">6 months</option>
+                </select>
+                <label for=""><b>Lecturer</b></label>
+                <select name="lecturer" id="" class="form-control" required>
+                    <option value="Jack">Jack</option>
+                    <option value="Ben">Ben</option>
+                    <option value="Dorothy">Dorothy</option>
+                    <option value="Steve">Steve</option>
+                    <option value="Collins">Collins</option>
+                    <option value="Bosire">Bosire</option>
+                </select>
+                <hr>
+                <div class="buttons">
+                    <button type="submit" class="btn btn-primary">Add New</button>
+                    &nbsp;
+                    <a href="searchCourseU.php" class="btn btn-info">Update</a>
+                    &nbsp;
+                    <a href="searchCourseD.php" class="btn-danger btn">Delete</a>
+
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
     </div>
-    <div class="col-sm-3"></div>
+
 </div>
 </body>
 </html>
